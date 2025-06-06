@@ -1,0 +1,43 @@
+<div
+  class="certification-card flex flex-col gap-5 md:gap-7 text-[#fafafa] bg-[#1a1a1a] w-full h-[320px] sm:h-[350px] md:h-[320px] rounded-xl p-8 drop-shadow-2xl hover:cursor-pointer"
+>
+  <div class="provider-logo">
+    <img
+      pAnimateOnScroll
+      enterClass="fade-in-up"
+      class="w-16 h-16"
+      [src]="cert.providerLogo"
+      alt="{{ cert.name }}"
+    />
+  </div>
+  <div class="certification-name-container">
+    <h3
+      pAnimateOnScroll
+      enterClass="fade-in-up"
+      class="text-2xl sm:text-3xl font-light"
+    >
+      {{ cert.name }}
+    </h3>
+  </div>
+  <div class="link-container flex justify-end">
+    @if (cert.link) {
+    <a
+      pAnimateOnScroll
+      enterClass="fade-in-up"
+      target="_blank"
+      class="font-light sm:text-lg md:text-xl relative after:content-[''] after:absolute after:bg-[#fafafa] after:h-[3px] after:w-0 after:transition-all after:duration-300 after:left-0 after:-bottom-[10px] hover:after:w-full"
+      [href]="cert.link"
+      >view certificate</a
+    >
+    } @else {
+    <a
+      pAnimateOnScroll
+      enterClass="fade-in-up"
+      class="font-light sm:text-lg md:text-xl relative after:content-[''] after:absolute after:bg-[#fafafa] after:h-[3px] after:w-0 after:transition-all after:duration-300 after:left-0 after:-bottom-[10px] hover:after:w-full"
+      [href]="cert.file"
+      download
+      >view certificate</a
+    >
+    }
+  </div>
+</div>

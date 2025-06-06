@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Windows-XP-Tahoma";
+  src: url("/fonts/windows-xp-tahoma.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/fonts/helvetica-light-587ebe5a59211.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Thin.ttf") format("truetype");
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

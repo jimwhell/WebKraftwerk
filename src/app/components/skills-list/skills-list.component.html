@@ -1,0 +1,19 @@
+<div
+  class="skills-container text-left flex flex-col flex-wrap gap-12 lg:gap-20 xl:w-2/3 font-poppins"
+>
+  <div class="heading" pAnimateOnScroll enterClass="animate-fade-in-up">
+    <h2
+      class="font-light md:w-2/3 text-5xl sm:text-7xl xl:text-7xl text-gray-800"
+    >
+      skills and utilized technologies
+    </h2>
+  </div>
+
+  <div
+    class="skills-technologies-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-12 sm:gap-10 xl:gap-8"
+  >
+    @for (skill of skills; track skill.name) {
+    <app-skill-card [skillInput]="skill"></app-skill-card>
+    }
+  </div>
+</div>

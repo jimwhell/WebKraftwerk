@@ -1,0 +1,18 @@
+<div
+  class="projects-container text-left flex flex-col flex-wrap gap-12 font-poppins text-gray-800"
+>
+  <div
+    pAnimateOnScroll
+    enterClass="animate-fade-in-up"
+    class="projects-heading"
+  >
+    <h2 class="font-light text-5xl sm:text-7xl xl:text-7xl">works</h2>
+  </div>
+  <div
+    class="projects-list-container flex flex-col flex-wrap gap-16 md:gap-16 xl:gap-36"
+  >
+    @for (project of projects; track project.name) {
+    <app-project-card [projectInput]="project"></app-project-card>
+    }
+  </div>
+</div>

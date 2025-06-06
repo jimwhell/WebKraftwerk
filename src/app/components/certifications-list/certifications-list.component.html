@@ -1,0 +1,21 @@
+<div
+  class="certifications-container xl:w-2/3 text-left flex flex-col flex-wrap gap-12 font-poppins"
+>
+  <div class="heading">
+    <h2
+      pAnimateOnScroll
+      enterClass="animate-fade-in-up"
+      class="font-light text-5xl sm:text-7xl xl:text-7xl"
+    >
+      certifications
+    </h2>
+  </div>
+
+  <div
+    class="certifications-list grid grid-cols-1 sm:grid-cols-2 gap-12 xl:gap-16"
+  >
+    @for (cert of certifications; track $index) {
+    <app-certification-card [certInput]="cert"></app-certification-card>
+    }
+  </div>
+</div>
