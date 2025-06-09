@@ -1,2 +1,2 @@
-My developer potfolio. Built with Angular and TailwindCSS.
+My developer potfolio. Built with **Angular** and **TailwindCSS**.
 
